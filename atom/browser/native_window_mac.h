@@ -23,8 +23,7 @@
 
 namespace atom {
 
-class NativeWindowMac : public NativeWindow,
-                        public views::WidgetDelegate {
+class NativeWindowMac : public NativeWindow, public views::WidgetDelegate {
  public:
   NativeWindowMac(const mate::Dictionary& options, NativeWindow* parent);
   ~NativeWindowMac() override;

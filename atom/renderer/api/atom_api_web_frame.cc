@@ -442,13 +442,13 @@ v8::Local<v8::Value> WebFrame::FindFrameByName(const std::string& name) const {
 
 v8::Local<v8::Value> WebFrame::FindFrameByRoutingId(int routing_id) const {
   content::RenderFrame* render_frame =
-    content::RenderFrame::FromRoutingID(routing_id);
+      content::RenderFrame::FromRoutingID(routing_id);
   blink::WebLocalFrame* local_frame = nullptr;
   if (render_frame)
     local_frame = render_frame->GetWebFrame();
   if (local_frame)
-    return mate::CreateHandle(isolate(),
-                              new WebFrame(isolate(), local_frame)).ToV8();
+    return mate::CreateHandle(isolate(), new WebFrame(isolate(), local_frame))
+        .ToV8();
   else
     return v8::Null(isolate());
 }

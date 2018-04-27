@@ -58,7 +58,6 @@ BrowserClient::BrowserClient() : browser_main_parts_(nullptr) {
 
 BrowserClient::~BrowserClient() {}
 
-
 void BrowserClient::WebNotificationAllowed(
     int render_process_id,
     const base::Callback<void(bool, bool)>& callback) {

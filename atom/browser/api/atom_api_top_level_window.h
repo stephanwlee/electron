@@ -231,7 +231,7 @@ class TopLevelWindow : public mate::TrackableObject<TopLevelWindow>,
 
 namespace mate {
 
-template<>
+template <>
 struct Converter<atom::NativeWindow*> {
   static bool FromV8(v8::Isolate* isolate,
                      v8::Local<v8::Value> val,

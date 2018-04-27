@@ -23,8 +23,8 @@ namespace atom {
 
 Browser::LoginItemSettings::LoginItemSettings() = default;
 Browser::LoginItemSettings::~LoginItemSettings() = default;
-Browser::LoginItemSettings::LoginItemSettings(
-    const LoginItemSettings& other) = default;
+Browser::LoginItemSettings::LoginItemSettings(const LoginItemSettings& other) =
+    default;
 
 Browser::Browser()
     : is_quiting_(false),

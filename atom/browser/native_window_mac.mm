@@ -252,8 +252,7 @@ NativeWindowMac::NativeWindowMac(const mate::Dictionary& options,
 
   NSRect main_screen_rect = [[[NSScreen screens] firstObject] frame];
   gfx::Rect bounds(round((NSWidth(main_screen_rect) - width) / 2),
-                   round((NSHeight(main_screen_rect) - height) / 2),
-                   width,
+                   round((NSHeight(main_screen_rect) - height) / 2), width,
                    height);
 
   options.Get(options::kResizable, &resizable_);
@@ -985,8 +984,8 @@ void NativeWindowMac::SetBackgroundColor(SkColor color) {
   // views::Widget adds a layer for the content view.
   auto* bridge = views::NativeWidgetMac::GetBridgeForNativeWindow(window_);
   NSView* compositor_superview =
-      static_cast<ui::AcceleratedWidgetMacNSView*>(bridge)->
-          AcceleratedWidgetGetNSView();
+      static_cast<ui::AcceleratedWidgetMacNSView*>(bridge)
+          ->AcceleratedWidgetGetNSView();
   [[compositor_superview layer] setBackgroundColor:cgcolor];
   // When using WebContents as content view, the contentView also has layer.
   if ([[window_ contentView] wantsLayer])

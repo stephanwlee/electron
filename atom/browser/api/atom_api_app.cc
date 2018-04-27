@@ -350,8 +350,8 @@ struct Converter<content::CertificateRequestResultType> {
 namespace atom {
 
 ProcessMetric::ProcessMetric(int type,
-    base::ProcessId pid,
-    std::unique_ptr<base::ProcessMetrics> metrics) {
+                             base::ProcessId pid,
+                             std::unique_ptr<base::ProcessMetrics> metrics) {
   this->type = type;
   this->pid = pid;
   this->metrics = std::move(metrics);
