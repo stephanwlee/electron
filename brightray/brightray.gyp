@@ -122,6 +122,7 @@
                   '<(libchromiumcontent_dir)/libwebrtc_common.a',
                   '<(libchromiumcontent_dir)/libinit_webrtc.a',
                   '<(libchromiumcontent_dir)/libyuv.a',
+                  '<(libchromiumcontent_dir)/libpdfium_skia_shared.a',
                   '<(libchromiumcontent_dir)/librenderer.a',
                   '<(libchromiumcontent_dir)/libsecurity_state.a',
                   '<(libchromiumcontent_dir)/libviz_service.a',
